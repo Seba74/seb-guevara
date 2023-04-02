@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'seb-guevara';
+  scrollPosition: number = 0;
+
+  // hostlistener scrolling
+  @HostListener('window:scroll', ['$event'])
+  onWindowScroll(e: any) {
+    this.scrollPosition = window.pageYOffset | document.body.scrollTop | document.documentElement.scrollTop | 0;
+  }
+
 }

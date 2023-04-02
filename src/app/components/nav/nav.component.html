@@ -1,0 +1,37 @@
+<div class="header flex justify-between w-full">
+    <app-header [scrollPosition]="scrollPosition" class="z-40"></app-header>
+
+    <button FadeInLeft [positionX]="25" class="menu-toggle right-4 top-6 fixed" (click)="toggleMenu()">
+        <svg viewBox="0 0 12 10" class="hamburger h-12 w-12">
+            <path d="M10,2 L2,2" class="bar-1" #bar1></path>
+            <path d="M2,5 L10,5" class="bar-2" #bar2></path>
+            <path d="M10,8 L2,8" class="bar-3" #bar3></path>
+        </svg>
+    </button>
+</div>
+
+<!-- FULL SCREEN MODAL -->
+<section class="full-page" [ngClass]="{'getOut': !isMenuOpen}" #modalMenu>
+    <div class="menu">
+        <div class="menu-bg">
+            <span id="spanModal"></span>
+            <span id="spanModal"></span>
+            <span id="spanModal"></span>
+        </div>
+        <nav>
+            <ul>
+                <li><a id="navi" href="#">Home</a></li>
+                <li><a id="navi" href="#">About</a></li>
+                <li><a id="navi" href="#">Projects</a></li>
+                <li><a id="navi" href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-nav-footer absolute">
+            <ul class="social-links">
+                <li><a id="social" href="#">Instagram</a></li>
+                <li><a id="social" href="#">Linkedin</a></li>
+                <li><a id="social" href="#">GitHub</a></li>
+            </ul>
+        </div>
+    </div>
+</section>

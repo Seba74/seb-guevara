@@ -1,0 +1,37 @@
+// variables
+@import './palettes.scss';
+
+// color as palets
+
+$primary: #5c7183;
+$secondary: #EF381E;
+$background: #142335;
+$dark: #212121;
+$white: #fff;
+$black: #000;
+$transparent: transparent;
+
+
+.bg {
+  background-color: $background;
+}
+
+.primary {
+    color: $primary;
+}
+
+.secondary {
+    color: $secondary;
+}
+
+.dark {
+    color: $dark;
+}
+
+.white {
+    color: $white;
+}
+
+.black {
+    color: $black;
+}

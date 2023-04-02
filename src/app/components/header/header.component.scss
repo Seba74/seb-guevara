@@ -1,0 +1,31 @@
+@import '../../../styles/var.scss';
+
+.header-container {
+  width: 100vw;
+  height: 60px;
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: max-content;
+    height: 100%;
+    gap: 8px;
+    padding-left: 10px;
+    .header__logo {
+      display: flex;
+      align-items: center;
+      width: max-content;
+      height: 40px;
+      img {
+        width: max-content;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+    h1 {
+      width: 100%;
+      font-size: 2rem;
+      font-weight: 600;
+    }
+  }
+}
