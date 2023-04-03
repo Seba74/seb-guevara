@@ -55,12 +55,12 @@ html {
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 1.6rem;
+    overflow-x: hidden;
+  
 }
 
 html, body, #root {
-    height: 100%;
+    height: max-content;
 }
 
-
-html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

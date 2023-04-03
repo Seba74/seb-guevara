@@ -1,20 +1,20 @@
 <div class="home-container">
-    <div FadeIn [delay]=".8" class="title-container px-8">
-        <h1 class="white text-5xl">I'm <span class="secondary">Sebastian Guevara</span> Frontend
+    <div class="title-container px-8">
+        <h1 FadeIn [delay]=".4" class="white text-5xl op-animation">I'm <span class="secondary">Sebastian Guevara</span> Frontend
             Developer</h1>
-        <div class="text white">
+        <div FadeIn [delay]=".6" class="text white op-animation">
             <p>Welcome to my portfolio!</p>
         </div>
     </div>
-    <div FadeIn [delay]="1.8" class="img-container">
-        <div FadeIn [delay]="1.6" class="polygon"></div>
-        <div FadeIn [delay]="1.6" class="img-content">
+    <div FadeIn [delay]=".1" class="img-container">
+        <div class="polygon"></div>
+        <div class="img-content">
             <img class="" src="../../../assets/images/profile/me-bge.png" alt="Me">
         </div>
     </div>
     <div class="btn-container flex gap-4 mt-28">
-        <button mat-raised-button [color]="'primary'" FadeInLeft [delay]="1.4" [positionX]="-200"  class="projects">Projects</button>
-        <button mat-raised-button FadeInLeft [delay]="1.4" [positionX]="200" class="cv">
+        <button mat-raised-button [color]="'primary'" FadeInLeft [delay]=".2" [positionX]="-200"  class="projects">Projects</button>
+        <button mat-stroked-button FadeInLeft [delay]=".2" [positionX]="200" class="cv">
             <mat-icon>download</mat-icon>
             Download CV
         </button>

@@ -1,8 +1,8 @@
 <header class="header-container fixed">
     <div class="header">
-        <div FadeInLeft [positionX]="-200" class="header__logo z-80">
+        <div FadeInLeft [positionX]="-200" class="header__logo">
             <img src="assets/logo/logo.svg" alt="logo" />
+            <h1 class="white" [ngClass]="{'opacity-0 transition-opacity': scrollPosition > 30}">SEB GUEVARA</h1>
         </div>
-        <h1 FadeInLeft [positionX]="-200" class="white" [ngClass]="{'opacity-0 transition-opacity': scrollPosition > 30}">SEB GUEVARA</h1>
     </div>
 </header>

@@ -3,9 +3,7 @@ import {
   Component,
   ElementRef,
   Input,
-  QueryList,
   ViewChild,
-  ViewChildren,
 } from '@angular/core';
 import { gsap, Expo } from 'gsap';
 
@@ -97,7 +95,7 @@ export class NavComponent implements AfterViewInit {
   toggleMenu() {
     if (!this.isMenuOpen) {
       this.modalAnimation.from(this.modalMenu.nativeElement, {
-        duration: 0.1,
+        duration: 0.1,  
         display: 'none',
         ease: Expo.easeInOut,
         onStart: () => {
@@ -113,7 +111,7 @@ export class NavComponent implements AfterViewInit {
       });
     } else {
       this.modalAnimation.to(this.modalMenu.nativeElement, {
-        duration: 1.8,
+        duration: 1.6,
         display: 'block',
         ease: Expo.easeInOut,
         onStart: () => {
@@ -122,7 +120,7 @@ export class NavComponent implements AfterViewInit {
           this.socialAnimation.reverse();
           setTimeout(() => {
             this.spanAnimation.reverse();
-          }, 1100);
+          }, 1000);
         },
         onComplete: () => {
           this.isMenuOpen = false;

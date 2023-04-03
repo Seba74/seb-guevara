@@ -5,8 +5,8 @@
     flex-direction: column;
     align-items: center;
     height: 100vh;
-    width: 100%;
-    padding-top: 90px;
+    width: 100vw;
+    padding-top: 110px;
     overflow-x: hidden;
 }
 
@@ -18,7 +18,7 @@
     align-items: center;
     margin-bottom: 60px;
     .text{
-        margin-top: 20px;
+        margin: 20px 0;
     }
 }
 
@@ -30,7 +30,7 @@
     position: relative;
     width: 100%;
     height: max-content;
-    margin-top: 10px;
+    margin-top: 20px;
   &::before {
     content: "";
     position: absolute;
@@ -63,10 +63,10 @@
 }
 
 .img-content {
-  width: 240px;
-  height: 130%;
+  width: 255px;
+  height: 135%;
   position: absolute;
-  top: -54px;
+  top: -70px;
   z-index: 10;
   img {
     width: 100%;
@@ -76,8 +76,8 @@
 }
 
 .polygon {
-  width: 22rem;
-  height: 18rem;
+  width: 25rem;
+  height: 20rem;
   border-radius: 80px 80px 44px 124px / 90px 90px 0px 0px;
   background-color: $secondary;
   box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.8);
@@ -86,7 +86,8 @@
 
 .btn-container {
   .cv {
-    color: #EF381E;
+    color: $white;
+    border: 1px solid $secondary;
     mat-icon{
         width: 16px;
         height: 16px;

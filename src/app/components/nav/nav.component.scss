@@ -54,7 +54,7 @@ nav{
   ul {
     display: flex;
     flex-direction: column;
-    row-gap: 5px;
+    row-gap: 15px;
     li{
       transition: transform 400ms ease-in-out 0s;
       overflow: hidden;
@@ -78,7 +78,7 @@ nav{
   align-items: center;
   justify-content: center;
   bottom: 0;
-  padding-bottom: 10px;
+  padding-bottom: 80px;
   .social-links{
     display: flex;
     align-items: center;
