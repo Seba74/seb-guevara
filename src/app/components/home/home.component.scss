@@ -10,20 +10,20 @@
     overflow-x: hidden;
 }
 
-.title-container {
+.home-title-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
     align-items: center;
     margin-bottom: 60px;
-    .text{
+    .home-text-container{
         margin: 20px 0;
     }
 }
 
 
-.img-container {
+.home-img-container {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -62,7 +62,7 @@
   }
 }
 
-.img-content {
+.home-img-content {
   width: 255px;
   height: 135%;
   position: absolute;
@@ -75,7 +75,7 @@
   }
 }
 
-.polygon {
+.home-polygon {
   width: 25rem;
   height: 20rem;
   border-radius: 80px 80px 44px 124px / 90px 90px 0px 0px;
@@ -84,8 +84,8 @@
   z-index: 5;
 }
 
-.btn-container {
-  .cv {
+.home-btn-container {
+  .home-cv {
     color: $white;
     border: 1px solid $secondary;
     mat-icon{

@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
+
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { HeaderComponent } from './header/header.component';
@@ -17,7 +19,9 @@ import {
 
 // Material
 import { MatButtonModule } from '@angular/material/button';
-import { MatIconModule } from '@angular/material/icon';
+import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
+import { DomSanitizer } from '@angular/platform-browser';
+import { SkillsComponent } from './skills/skills.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +29,7 @@ import { MatIconModule } from '@angular/material/icon';
     NavComponent,
     HomeComponent,
     AboutComponent,
+    SkillsComponent,
     ProjectsComponent,
     ContactComponent,
     FooterComponent,
@@ -36,6 +41,7 @@ import { MatIconModule } from '@angular/material/icon';
   ],
   imports: [
     CommonModule,
+    HttpClientModule,
 
     // Material
     MatButtonModule,
@@ -46,9 +52,15 @@ import { MatIconModule } from '@angular/material/icon';
     NavComponent,
     HomeComponent,
     AboutComponent,
+    SkillsComponent,
     ProjectsComponent,
     ContactComponent,
     FooterComponent,
   ],
 })
-export class ComponentsModule {}
+export class ComponentsModule {
+
+  constructor(matIconRegistry: MatIconRegistry, domSanitizer: DomSanitizer){
+    matIconRegistry.addSvgIconSet(domSanitizer.bypassSecurityTrustResourceUrl('./assets/mdi.svg'));
+  }
+}

@@ -23,7 +23,6 @@ export class HomeComponent implements OnInit, AfterViewInit {
     this.triggerAnimation = gsap.timeline({
       scrollTrigger: {
         trigger: this.document.body,
-        markers: true,
         start: 'top top',
         end: '100% 100%',
         scrub: true,
@@ -33,13 +32,13 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
 
   scrollAnimations(): void {
-    this.triggerAnimation.to('.img-content', {
-      scale: .3,
-      opacity: 0.2,
-      marginTop: '95px',
+    this.triggerAnimation.to('.home-img-content', {
+      scale: .4,
+      opacity: 0.8,
+      marginTop: '81px',
     })
-    .to('.projects', { translateY: -300 }, 0)
-    .to('.cv', { translateY: -300 }, 0)
-    .to('.op-animation', { opacity: 0, duration: .1 }, 0);
+    .to('.home-projects', { duration: .13, rotate: 180 }, 0)
+    .to('.home-cv', { duration: .13, rotate: 180 }, 0)
+    .to('.home-op-animation', { opacity: 0, duration: .1 }, 0);
   }
 }

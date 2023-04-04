@@ -86,6 +86,7 @@ export class NavComponent implements AfterViewInit {
         y: '100%',
         stagger: 0.1,
         opacity: 0,
+        delay: .9,
         ease: Expo.easeInOut,
       }, '-=.6');
 
@@ -107,6 +108,9 @@ export class NavComponent implements AfterViewInit {
         onComplete: () => {
           this.isMenuOpen = true;
           this.modalMenu.nativeElement.style.display = 'block';
+          setTimeout(() => {
+            this.modalMenu.nativeElement.style.backgroundColor = '#191919';
+          }, 1000);
         },
       });
     } else {
@@ -116,6 +120,7 @@ export class NavComponent implements AfterViewInit {
         ease: Expo.easeInOut,
         onStart: () => {
           this.burgerAnimation.reverse();
+          this.modalMenu.nativeElement.style.backgroundColor = 'transparent';
           this.naviAnimation.reverse();
           this.socialAnimation.reverse();
           setTimeout(() => {
