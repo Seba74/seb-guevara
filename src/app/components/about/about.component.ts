@@ -18,13 +18,12 @@ export class AboutComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    console.log(this.document.body);
     const aboutContainer = this.document.body.querySelector('.about-container');
 
     this.triggerAnimation = gsap.timeline({
       scrollTrigger: {
         trigger: aboutContainer,
-        start: 'top-=700px ${aboutContainer}',
+        start: 'top-=600px ${aboutContainer}',
         end: 'bottom-=100px ${aboutContainer}',
         scrub: true,
       },

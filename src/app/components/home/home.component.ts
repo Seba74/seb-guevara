@@ -1,4 +1,5 @@
 import { DOCUMENT } from '@angular/common';
+import { HttpClient } from '@angular/common/http';
 import { AfterViewInit, Component, OnInit, Inject } from '@angular/core';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -11,14 +12,13 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 export class HomeComponent implements OnInit, AfterViewInit {
   triggerAnimation!: gsap.core.Timeline;
 
-  constructor(@Inject(DOCUMENT) private document: Document) {}
+  constructor(private http: HttpClient, @Inject(DOCUMENT) private document: Document) {}
 
   ngOnInit(): void {
     gsap.registerPlugin(ScrollTrigger);
   }
 
   ngAfterViewInit(): void {
-    console.log(this.document.body);
 
     this.triggerAnimation = gsap.timeline({
       scrollTrigger: {
@@ -37,8 +37,17 @@ export class HomeComponent implements OnInit, AfterViewInit {
       opacity: 0.8,
       marginTop: '81px',
     })
-    .to('.home-projects', { duration: .13, rotate: 180 }, 0)
-    .to('.home-cv', { duration: .13, rotate: 180 }, 0)
+    .to('.home-projects', { duration: .1, rotate: 180 }, 0)
+    .to('.home-cv', { duration: .1, rotate: 180 }, 0)
     .to('.home-op-animation', { opacity: 0, duration: .1 }, 0);
   }
+
+  downloadPDF() {
+    const url = 'assets/cv/cv.pdf';
+    this.http.get(url, { responseType: 'blob' }).subscribe((res: any) => {
+      const fileURL = URL.createObjectURL(res);
+      window.open(fileURL);
+    });
+  }
+
 }

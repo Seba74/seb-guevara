@@ -1,0 +1,25 @@
+@import '../../../styles/var.scss';
+
+.skills-container{
+    overflow: hidden;
+}
+
+.skills-title-container {
+    text-shadow: 0 0 3px #000;
+    overflow: hidden;
+}
+
+
+.icon{
+    width: 100px;
+    height: 100px;
+}
+
+.sm-icon{
+    width: 80px;
+    height: 80px;
+}
+
+.invert {
+    filter: invert(100%);
+}

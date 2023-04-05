@@ -53,7 +53,7 @@ html {
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: $main-font;
     font-size: 1.6rem;
     overflow-x: hidden;
   
@@ -62,5 +62,3 @@ body {
 html, body, #root {
     height: max-content;
 }
-
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

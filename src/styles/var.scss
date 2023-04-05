@@ -11,6 +11,12 @@ $white: #fff;
 $black: #000;
 $transparent: transparent;
 
+$main-font: 'Poppins', sans-serif;
+$title-font: 'Dancing Script', cursive;
+
+.title-font {
+  font-family: $title-font;
+}
 
 .bg {
   background-color: $background;
