@@ -1,0 +1,32 @@
+@import "../../../styles/var.scss";
+
+::ng-deep mat-card-content {
+  mat-accordion {
+    mat-expansion-panel {
+      background-color: inherit !important;
+      box-shadow: none !important;
+    }
+    
+    mat-expansion-panel-header {
+      background-color: inherit !important;
+    }
+  }
+}
+
+
+.project-content {
+  color: $white;
+  mat-card {
+    background-color: inherit !important;
+    border: 1px solid $white;
+  }
+}
+
+.show-more {
+  color: $white;
+  font-size: 4rem;
+  font-weight: 600;
+  width: max-content;
+  height: max-content;
+  cursor: pointer;
+}

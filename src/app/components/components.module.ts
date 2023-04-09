@@ -21,6 +21,9 @@ import {
 // Material
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
+import {MatExpansionModule} from '@angular/material/expansion';
+import { MatCardModule } from '@angular/material/card';
+
 import { DomSanitizer } from '@angular/platform-browser';
 
 // others
@@ -51,6 +54,8 @@ register();
     // Material
     MatButtonModule,
     MatIconModule,
+    MatExpansionModule,
+    MatCardModule,
   ],
   exports: [
     HeaderComponent,

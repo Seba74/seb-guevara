@@ -37,8 +37,8 @@ export class HomeComponent implements OnInit, AfterViewInit {
       opacity: 0.8,
       marginTop: '81px',
     })
-    .to('.home-projects', { duration: .1, rotate: 180 }, 0)
-    .to('.home-cv', { duration: .1, rotate: 180 }, 0)
+    .to('.home-projects', { duration: .06, rotate: 180 }, 0)
+    .to('.home-cv', { duration: .06, rotate: 180 }, 0)
     .to('.home-op-animation', { opacity: 0, duration: .1 }, 0);
   }
 

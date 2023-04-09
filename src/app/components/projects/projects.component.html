@@ -1,4 +1,34 @@
-<div class="w-screen h-screen flex flex-col">
-    <h1>About Me</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id unde explicabo minus nihil veritatis error eos neque ex, molestias nemo in autem non porro nobis. Excepturi quae sit ea a.</p>
+<div class="projects-container w-screen h-max">
+    <div class="project-title-container mb-32">
+        <h1 class="text-6xl text-center font-bold title-font title-font white ">PROJECT <span
+                class="secondary title-font">WORKS</span></h1>
+    </div>
+    <div class="project-content flex flex-col gap-y-10">
+        <mat-card class="project-card mx-14" *ngFor="let project of projects">
+            <mat-card-header>
+                <img mat-card-image src="{{project.image}}">
+            </mat-card-header>
+            <mat-card-content>
+                <mat-accordion>
+                    <mat-expansion-panel hideToggle>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title class="flex justify-center w-max h-max">
+                                <mat-icon class="show-more">keyboard_arrow_down</mat-icon>
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <p class="text-white">{{project.description}}</p>
+                    </mat-expansion-panel>
+                </mat-accordion>
+            </mat-card-content>
+            <mat-card-actions class="w-100 flex justify-between mx-2 mb-14 relative">
+                <h1>{{project.title}}</h1>
+                <button mat-raised-button [color]="'primary'" class="px-4 absolute right-5 top-0" [disabled]="!project.repoAvailable">
+                    <a href="{{project.repoUrl}}" target="_blank">
+                        <p class="flex justify-center items-center">REPOSITORY<mat-icon
+                                class="text-3xl mt-1 ml-4">launch</mat-icon></p>
+                    </a>
+                </button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
 </div>
