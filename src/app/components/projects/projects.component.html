@@ -1,9 +1,9 @@
-<div class="projects-container w-screen h-max">
+<div class="projects-container w-full h-max">
     <div class="project-title-container mb-32">
         <h1 class="text-6xl text-center font-bold title-font title-font white ">PROJECT <span
                 class="secondary title-font">WORKS</span></h1>
     </div>
-    <div class="project-content flex flex-col gap-y-10">
+    <div class="project-content">
         <mat-card class="project-card mx-14" *ngFor="let project of projects">
             <mat-card-header>
                 <img mat-card-image src="{{project.image}}">
@@ -21,9 +21,9 @@
                 </mat-accordion>
             </mat-card-content>
             <mat-card-actions class="w-100 flex justify-between mx-2 mb-14 relative">
-                <h1>{{project.title}}</h1>
-                <button mat-raised-button [color]="'primary'" class="px-4 absolute right-5 top-0" [disabled]="!project.repoAvailable">
-                    <a href="{{project.repoUrl}}" target="_blank">
+                <h1 class="text-center pr-7">{{project.title}}</h1>
+                <button mat-raised-button [color]="'primary'" class="absolute right-5 top-0 w-max" [disabled]="!project.repoAvailable">
+                    <a href="{{project.repoUrl}}" target="_blank" class="mx-8">
                         <p class="flex justify-center items-center">REPOSITORY<mat-icon
                                 class="text-3xl mt-1 ml-4">launch</mat-icon></p>
                     </a>
