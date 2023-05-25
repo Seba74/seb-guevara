@@ -1,11 +1,10 @@
 <div #pageContainer class="page-container bg h-max">
-  <app-nav [scrollPosition]="scrollPosition" class="nav"></app-nav>
+  <app-nav [scrollPosition]="scrollPosition" class="nav" [actualPage]="actualSection" (sectionId)="scrollToSection($event)"></app-nav>
   <main class="main">
-    <app-home></app-home>
-    <app-about></app-about>
-    <app-skills></app-skills>
-    <app-projects></app-projects>
-    <app-contact></app-contact>
+    <app-home #section id="home"></app-home>
+    <app-about #section id="about"></app-about>
+    <app-skills #section id="stack"></app-skills>
+    <app-projects #section id="projects"></app-projects>
   </main>
   <app-footer></app-footer>
 </div>

@@ -51,6 +51,7 @@ nav{
   position: relative;
   margin-top: 120px;
   z-index: 10;
+  user-select: none;
   ul {
     display: flex;
     flex-direction: column;
@@ -66,6 +67,7 @@ nav{
         font-weight: 400;
         display: inline-block;
         line-height: 1;
+        cursor: pointer;
       }
     }
   }
@@ -95,7 +97,14 @@ nav{
         font-weight: 400;
         display: inline-block;
         line-height: 1;
+        cursor: pointer;
       }
     }
+  }
+}
+
+.active{ 
+  a{
+    color: $secondary !important;
   }
 }

@@ -1,20 +1,20 @@
 <div class="home-container w-full">
-    <div class="home-title-container px-8">
-        <h1 FadeIn [delay]=".2" class="white text-5xl home-op-animation">I'm <span class="secondary">Sebastian Guevara</span> Frontend
+    <div class="home-title-container px-8 fade-in-fwd">
+        <h1 class="white text-5xl home-op-animation">I'm <span class="secondary">Sebastian Guevara</span> Frontend
             Developer</h1>
-        <div FadeIn [delay]=".4" class="home-text-container white home-op-animation title-font text-4xl">
+        <div class="home-text-container white home-op-animation title-font text-4xl">
             <p>Welcome to my portfolio!</p>
         </div>
     </div>
-    <div FadeIn [delay]=".1" class="home-img-container">
+    <div class="home-img-container">
         <div class="home-polygon"></div>
-        <div class="home-img-content">
+        <div class="home-img-content slide-in-fwd-center">
             <img class="" src="../../../assets/images/profile/me-bge.png" alt="Me">
         </div>
     </div>
-    <div class="home-btn-container flex gap-4 mt-28">
-        <button mat-raised-button [color]="'primary'" FadeInLeft [delay]=".2" [positionX]="-200"  class="home-projects">Projects</button>
-        <button mat-stroked-button FadeInLeft [delay]=".2" [positionX]="200" class="home-cv" (click)="downloadPDF()">
+    <div class="home-btn-container flex gap-4 mt-28 fade-in-fwd">
+        <button mat-raised-button [color]="'primary'" class="home-projects">Projects</button>
+        <button mat-stroked-button class="home-cv" (click)="downloadPDF()">
             <mat-icon>download</mat-icon>
             Download CV
         </button>

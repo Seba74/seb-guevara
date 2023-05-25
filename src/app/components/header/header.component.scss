@@ -9,7 +9,8 @@
     justify-content: center;
     width: max-content;
     height: 100%;
-    padding-left: 10px;
+    cursor: pointer;
+    user-select: none;
     .header__logo {
       display: flex;
       align-items: center;

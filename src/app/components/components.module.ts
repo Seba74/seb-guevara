@@ -8,7 +8,6 @@ import { SkillsComponent } from './skills/skills.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { NavComponent } from './nav/nav.component';
-import { ContactComponent } from './contact/contact.component';
 import { ProjectsComponent } from './projects/projects.component';
 
 // import directives
@@ -39,7 +38,6 @@ register();
     AboutComponent,
     SkillsComponent,
     ProjectsComponent,
-    ContactComponent,
     FooterComponent,
 
     // add directives
@@ -64,7 +62,6 @@ register();
     AboutComponent,
     SkillsComponent,
     ProjectsComponent,
-    ContactComponent,
     FooterComponent,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]

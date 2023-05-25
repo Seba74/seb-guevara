@@ -44,7 +44,7 @@ export class ProjectsComponent {
     },
     {
       title: 'Coffee Shop',
-      description: 'E-Commerce where you can buy coffe.',
+      description: 'E-Commerce where you can buy coffee.',
       image: this.commonUrl + '6.png',
       repoUrl: '',
       repoAvailable: false,

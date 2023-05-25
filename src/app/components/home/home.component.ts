@@ -35,7 +35,6 @@ export class HomeComponent implements OnInit, AfterViewInit {
     this.triggerAnimation.to('.home-img-content', {
       scale: .4,
       opacity: 0.8,
-      marginTop: '81px',
     })
     .to('.home-projects', { duration: .06, rotate: 180 }, 0)
     .to('.home-cv', { duration: .06, rotate: 180 }, 0)

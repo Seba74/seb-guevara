@@ -1,0 +1,84 @@
+@import "../../../styles/var.scss";
+
+.footer-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  width: 100vw;
+  height: 22rem;
+  margin-top: 4rem;
+}
+.footer-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 10rem;
+  column-gap: 40px;
+}
+
+.line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+  height: 1px;
+  background-color: $white;
+}
+
+.redes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.footer-copyright {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  left: 50%;
+  bottom: 5px;
+  transform: translateX(-50%);
+  width: 300px;
+  height: 140px;
+  padding: 0 5px;
+  border-radius: 5px 5px 0 0;
+
+  p{
+    color: $white;
+  }
+}
+
+.footer-logo {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+}
+
+.footer-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .footer-container {
+    height: max-content;
+    padding-bottom: 10px;
+  }
+
+  .footer-copyright {
+    position: relative;
+    width: 40%;
+    height: max-content;
+    padding: 10px;
+    border-radius: 10px;
+  }
+}

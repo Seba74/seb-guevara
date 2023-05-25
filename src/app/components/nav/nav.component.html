@@ -1,7 +1,6 @@
 <div class="header flex justify-between w-screen px-6">
     <app-header [scrollPosition]="scrollPosition" class="z-40"></app-header>
-
-    <button FadeInLeft [positionX]="25" class="menu-toggle right-4 top-6 fixed" (click)="toggleMenu()">
+    <button class="menu-toggle right-4 top-6 fixed fade-in-right" (click)="toggleMenu()">
         <svg viewBox="0 0 12 10" class="hamburger h-12 w-12">
             <path d="M10,2 L2,2" class="bar-1" #bar1></path>
             <path d="M2,5 L10,5" class="bar-2" #bar2></path>
@@ -20,17 +19,12 @@
         </div>
         <nav>
             <ul>
-                <li><a id="navi" href="#">Home</a></li>
-                <li><a id="navi" href="#">About</a></li>
-                <li><a id="navi" href="#">Projects</a></li>
-                <li><a id="navi" href="#">Contact</a></li>
+                <li *ngFor="let item of pages" [ngClass]="{'active': actualPage == item.id}"><a id="navi" (click)="goToSection(item.id)">{{item.name}}</a></li>
             </ul>
         </nav>
         <div class="header-nav-footer absolute">
             <ul class="social-links">
-                <li><a id="social" href="#">Instagram</a></li>
-                <li><a id="social" href="#">Linkedin</a></li>
-                <li><a id="social" href="#">GitHub</a></li>
+                <li *ngFor="let item of social"><a id="social" href="{{item.url}}" target="_blank">{{item.name}}</a></li>
             </ul>
         </div>
     </div>

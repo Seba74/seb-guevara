@@ -2,7 +2,9 @@ import {
   AfterViewInit,
   Component,
   ElementRef,
+  EventEmitter,
   Input,
+  Output,
   ViewChild,
 } from '@angular/core';
 import { gsap, Expo } from 'gsap';
@@ -26,6 +28,24 @@ export class NavComponent implements AfterViewInit {
   naviAnimation!: gsap.core.Timeline;
   socialAnimation!: gsap.core.Timeline;
   isMenuOpen = false;
+  @Output() sectionId = new EventEmitter<string>();
+  @Input() actualPage = 'home';
+
+  pages = [
+    { name: 'Home', id: 'home' },
+    { name: 'About', id: 'about' },
+    { name: 'Stack', id: 'stack' },
+    { name: 'Projects', id: 'projects' },
+  ];
+
+  social = [
+    { name: 'Instagram', url: 'https://www.instagram.com/_sebguevara/' },
+    {
+      name: 'Linkedin',
+      url: 'https://www.linkedin.com/in/sebastian-guevara-1535b7183',
+    },
+    { name: 'Github', url: 'https://github.com/Seba74' },
+  ];
 
   constructor() {}
 
@@ -75,9 +95,11 @@ export class NavComponent implements AfterViewInit {
         duration: 1,
         y: '100%',
         stagger: 0.2,
-        delay: .8,
+        delay: 0.8,
         ease: Expo.easeInOut,
-      }, '-=.6');
+      },
+      '-=.6'
+    );
 
     this.socialAnimation.from(
       '#social',
@@ -86,9 +108,11 @@ export class NavComponent implements AfterViewInit {
         y: '100%',
         stagger: 0.1,
         opacity: 0,
-        delay: .9,
+        delay: 0.9,
         ease: Expo.easeInOut,
-      }, '-=.6');
+      },
+      '-=.6'
+    );
 
     this.burgerAnimation.reverse();
   }
@@ -96,7 +120,7 @@ export class NavComponent implements AfterViewInit {
   toggleMenu() {
     if (!this.isMenuOpen) {
       this.modalAnimation.from(this.modalMenu.nativeElement, {
-        duration: 0.1,  
+        duration: 0.1,
         display: 'none',
         ease: Expo.easeInOut,
         onStart: () => {
@@ -133,5 +157,15 @@ export class NavComponent implements AfterViewInit {
         },
       });
     }
+  }
+
+  goToSection(sectionId: string): void {
+    if (this.actualPage !== sectionId) {
+      this.toggleMenu();
+    }
+    setTimeout(() => {
+      this.actualPage = sectionId;
+      this.sectionId.emit(sectionId);
+    }, 2000);
   }
 }

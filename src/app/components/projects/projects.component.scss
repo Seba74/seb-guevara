@@ -13,12 +13,17 @@
   }
 }
 
+.projects-container{
+  margin-top: 40px;
+}
 
 .project-content {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  place-content: center;
+  grid-template-columns: repeat(2, 400px);
   row-gap: 4rem;
   color: $white;
+  user-select: none;
   mat-card {
     background-color: inherit !important;
     border: 1px solid $white;

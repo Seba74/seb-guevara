@@ -1,8 +1,8 @@
 <header class="header-container fixed w-full">
-    <div class="header">
-        <div FadeInLeft [positionX]="-200" class="header__logo">
+    <div class="header fade-in-left">
+        <div class="header__logo" (click)="scrollToTop()">
             <img src="assets/logo/logo.svg" alt="logo" />
-            <h1 class="white" [ngClass]="{'opacity-0 transition-opacity': scrollPosition > 30}">SEB GUEVARA</h1>
+            <h1 class="white" [ngClass]="{'hidden': scrollPosition > 30}">SEB GUEVARA</h1>
         </div>
     </div>
 </header>

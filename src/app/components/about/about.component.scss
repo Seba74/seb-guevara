@@ -42,3 +42,12 @@
     }
   }
 }
+
+// media query for desktop
+
+@media (min-width: 768px) {
+  .about-container {
+    margin-top: 4rem;
+    padding: 0 20rem;
+  }
+}
