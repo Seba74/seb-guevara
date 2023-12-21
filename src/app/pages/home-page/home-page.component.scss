@@ -1,0 +1,37 @@
+.bg {
+    position: absolute;
+    width: 95%;
+    height: 80%;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: blur(25px);
+    background: linear-gradient(83.21deg, #964052 0%,#69323d 100%);
+    z-index: -1;
+    mask-image: radial-gradient(rgba(0, 0, 0, 0.6), transparent 70%);
+}
+@media screen and (max-width: 900px) {
+    .bg {
+        width: 300px;
+        height: 70px;
+        top: 65%;
+    }
+    .title-container {
+        row-gap: 40px;
+        h1 {
+            text-align: center;
+            font-size: 3.6rem;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 1.5rem;
+        }
+    }
+}
+
+@media screen and (max-width: 610px) {
+    .bg {
+        top: 60%;
+    }
+}

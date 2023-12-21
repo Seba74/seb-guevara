@@ -1,0 +1,20 @@
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(288px, 1fr));
+    gap: 1rem;
+    row-gap: 2rem;
+    place-items: center;
+}
+
+@media (min-width: 1600px) {
+    .cards-container {
+        padding: 0 2rem;
+        gap: 3rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .card-container {
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    }
+}

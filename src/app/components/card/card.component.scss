@@ -1,0 +1,30 @@
+@import "../../../styles/var.scss";
+
+.card-container {
+    border: 1px solid $primary-50;
+    transition: all 0.2s ease-in-out;
+}
+
+.card-container:hover {
+    border: 1px solid $primary-200;
+    transform: scale(1.005);
+    transition: border 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+@media (max-width: 600px) {
+    .card-container {
+        width: 350px;
+        height: 340px;
+    }
+
+    .text {
+        .title {
+            font-size: 1.2rem;
+        }
+        .description {
+            font-size: 0.8rem;
+            padding-right: 4px;
+        }
+    }
+}

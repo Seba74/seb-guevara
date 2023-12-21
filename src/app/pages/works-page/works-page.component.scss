@@ -1,0 +1,13 @@
+@media screen and (max-width: 600px) {
+    .works-page {
+        margin-top: 2rem;
+        padding-top: 7.5rem;
+        justify-content: center;
+
+        h1{
+            display: flex;
+            justify-self: start;
+            font-size: 2.5rem;
+        }
+    }
+}

@@ -1,0 +1,61 @@
+.bg {
+    position: absolute;
+    top: 80%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    width: 420px;
+    height: 400px;
+    background-image: url("../../../assets/bg/elime.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    opacity: 0.6;
+    z-index: -1;
+}
+
+// media 1150
+@media screen and (max-width: 1150px) {
+    .about-content {
+        width: 100%;
+        flex-direction: column;
+        align-items: start;
+
+        .info-container{
+            width: 100%;
+        }
+
+        .img-container {
+            display: flex;
+            align-self: center;
+        }
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+
+    .about-page {
+        margin-top: 4rem;
+        padding-top: 5.5rem;
+    }
+
+    .about-content {
+        flex-direction: column;
+        row-gap: 4rem;
+        .info-container {
+            width: 100%;
+            h1{
+                font-size: 2.5rem;
+            }
+            p {
+                font-size: .9rem;
+                margin-right: 0;
+            }
+        }
+    }
+
+    .bg {
+        width: 300px;
+        height: 300px;
+    }
+}

@@ -1,0 +1,90 @@
+@import "../../../styles/var.scss";
+
+.item {
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+.item:not(.active):hover {
+  h3 {
+    font-weight: 600;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    border-radius: 100px;
+    height: 35px;
+    width: 60px;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -60%);
+    background-color: $primary-800;
+    transition: all 0.3s ease-in-out;
+    opacity: 0.3;
+  }
+  .img-container {
+    z-index: 2;
+  }
+}
+
+.active {
+  h3 {
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    color: $primary-200;
+    transition: all 0.3s ease-in-out;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    border-radius: 100px;
+    height: 35px;
+    width: 60px;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -60%);
+    background-color: $primary-800;
+    opacity: .6;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .img-container {
+    z-index: 2;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  a {
+    flex-direction: row;
+    justify-content: start;
+    column-gap: 20px;
+
+    .img-container {
+      width: 2rem;
+    }
+
+    h3 {
+      font-size: 1rem;
+    }
+  }
+
+  .active {
+    &::before {
+      height: 45px;
+      width: 50px;
+      left: 0%;
+      top: 60%;
+      transform: translate(-18%, -58%);
+    }
+  }
+
+  .item:not(.active):hover {
+    &::before {
+      height: 45px;
+      width: 50px;
+      left: 0%;
+      top: 60%;
+      transform: translate(-18%, -57%);
+    }
+  }
+}

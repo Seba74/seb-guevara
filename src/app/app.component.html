@@ -1,0 +1,13 @@
+@if (mobile()) {
+<app-mobile-layout>
+  <app-home-page id="seb"></app-home-page>
+  <app-about-page id="about"></app-about-page>
+  <app-works-page id="works"></app-works-page>
+</app-mobile-layout>
+} @else {
+<app-desktop-layout>
+  <app-home-page id="seb"></app-home-page>
+  <app-about-page id="about"></app-about-page>
+  <app-works-page id="works"></app-works-page>
+</app-desktop-layout>
+}
